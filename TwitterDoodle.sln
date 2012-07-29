@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterDoodle", "src\TwitterDoodle\TwitterDoodle.csproj", "{2DDFDABD-F9CE-4B1B-96D1-C469E2160F7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{176A490B-33CE-4677-8B58-A46AB05E28BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterDoodle.Test", "test\TwitterDoodle.Test\TwitterDoodle.Test.csproj", "{B59CC45C-450F-4314-8CFF-4963754DBEAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DDFDABD-F9CE-4B1B-96D1-C469E2160F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDFDABD-F9CE-4B1B-96D1-C469E2160F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDFDABD-F9CE-4B1B-96D1-C469E2160F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDFDABD-F9CE-4B1B-96D1-C469E2160F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B59CC45C-450F-4314-8CFF-4963754DBEAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B59CC45C-450F-4314-8CFF-4963754DBEAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B59CC45C-450F-4314-8CFF-4963754DBEAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B59CC45C-450F-4314-8CFF-4963754DBEAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B59CC45C-450F-4314-8CFF-4963754DBEAA} = {176A490B-33CE-4677-8B58-A46AB05E28BF}
+	EndGlobalSection
+EndGlobal
