@@ -5,9 +5,13 @@ using System.Text;
 
 namespace TwitterDoodle.Data {
 
-    public class TwitterContext : ITwitterContext {
+    public class TwitterContext {
 
-        public ITwitterSet<Tweet> Tweet { get; set; }
-        public ITwitterSet<TwitterUser> TwitterUser { get; set; }
+        public TwitterContext() {
+
+            Tweet = new TweetSet();
+        }
+
+        public TweetSet Tweet { get; set; }
     }
 }

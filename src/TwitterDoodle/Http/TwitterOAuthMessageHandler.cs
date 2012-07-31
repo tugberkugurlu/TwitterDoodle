@@ -47,16 +47,16 @@ namespace TwitterDoodle.Http {
 
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) {
 
-            if (_oAuthState.Parameters != null) { 
+            //if (_oAuthState.Parameters != null) { 
 
-                //clear the content first. If parameters are passed, 
-                //that means the request is FormUrlEncoded
-                var query = _oAuthState.Parameters.ToString();
-                var httpContent = new StringContent(query);
-                httpContent.Headers.ContentType = MediaTypeConstants.ApplicationFormUrlEncodedMediaType;
+            //    //clear the content first. If parameters are passed, 
+            //    //that means the request is FormUrlEncoded
+            //    var query = _oAuthState.Parameters.ToString();
+            //    var httpContent = new StringContent(query);
+            //    httpContent.Headers.ContentType = MediaTypeConstants.ApplicationFormUrlEncodedMediaType;
 
-                request.Content = httpContent;
-            }
+            //    request.Content = httpContent;
+            //}
 
             //Add the auth header
             request.Headers.Authorization = new AuthenticationHeaderValue(

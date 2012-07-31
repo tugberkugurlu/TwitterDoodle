@@ -10,20 +10,35 @@ namespace TwitterDoodle.Http {
     
     public class TwitterHttpClient : HttpClient {
 
-        public TwitterHttpClient(OAuthCredential oAuthCredential, OAuthSignatureEntity signatureEntity) 
-            : this(oAuthCredential, signatureEntity, null) { 
+        private readonly OAuthCredential _oAuthCredential;
+        private readonly OAuthSignatureEntity _oAuthSignatureEntity;
+        private readonly TwitterQueryCollection _twitterQueryCollection;
+
+        public TwitterHttpClient(OAuthCredential oAuthCredential, OAuthSignatureEntity oAuthSignatureEntity) 
+            : this(oAuthCredential, oAuthSignatureEntity, null) { 
         }
 
-        public TwitterHttpClient(OAuthCredential oAuthCredential, OAuthSignatureEntity signatureEntity,
-            TwitterQueryCollection parameters) : base(new TwitterOAuthMessageHandler(oAuthCredential, signatureEntity, parameters, new HttpClientHandler())) {
+        public TwitterHttpClient(OAuthCredential oAuthCredential, OAuthSignatureEntity oAuthSignatureEntity,
+            TwitterQueryCollection queryCollection) : base(new TwitterOAuthMessageHandler(oAuthCredential, oAuthSignatureEntity, queryCollection, new HttpClientHandler())) {
 
             if (oAuthCredential == null) {
                 throw new NullReferenceException("oAuthCredential");
             }
 
-            if (signatureEntity == null) {
+            if (oAuthSignatureEntity == null) {
                 throw new NullReferenceException("signatureEntity");
             }
+
+            _oAuthCredential = oAuthCredential;
+            _twitterQueryCollection = queryCollection;
+            _oAuthSignatureEntity = oAuthSignatureEntity;
+        }
+
+        public TwitterQueryCollection TwitterQueryCollection { 
+
+            get {
+                return _twitterQueryCollection;
+            } 
         }
     }
 }

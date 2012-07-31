@@ -51,8 +51,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebAPIDoodle.Http">
-      <HintPath>..\..\packages\WebAPIDoodle.Http.0.2.2-preview5\lib\net40\WebAPIDoodle.Http.dll</HintPath>
+    <Reference Include="WebAPIDoodle.Http, Version=0.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\WebAPIDoodle.Http.0.2.3-pre01\lib\net40\WebAPIDoodle.Http.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -70,7 +71,7 @@
     <Compile Include="Common\IEnumerableExtensions.cs" />
     <Compile Include="Common\MediaTypeConstants.cs" />
     <Compile Include="Common\OAuthUtil.cs" />
-    <Compile Include="Data\Infrastructure\ITwitterContext.cs" />
+    <Compile Include="Common\TwitterUriConstants.cs" />
     <Compile Include="Data\Infrastructure\ITwitterGetableSet.cs" />
     <Compile Include="Data\Infrastructure\ITwitterPostableSet.cs" />
     <Compile Include="Data\Infrastructure\ITwitterSet.cs" />
@@ -81,7 +82,9 @@
     <Compile Include="Data\TwitterContext.cs" />
     <Compile Include="Data\TwitterUser.cs" />
     <Compile Include="Http\TwitterHttpClient.cs" />
+    <Compile Include="Http\TwitterHttpClientExtensions.cs" />
     <Compile Include="Http\TwitterOAuthMessageHandler.cs" />
+    <Compile Include="Http\TwitterQueryContent.cs" />
     <Compile Include="ITwitterService.cs" />
     <Compile Include="OAuth\OAuthCredential.cs" />
     <Compile Include="OAuth\OAuthSignatureEntity.cs" />
@@ -90,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="TwitterDoodle.nuspec" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
